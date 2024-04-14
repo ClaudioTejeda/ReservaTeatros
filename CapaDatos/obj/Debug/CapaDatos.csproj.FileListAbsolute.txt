@@ -10,3 +10,7 @@ C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug
 C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTableClientes.resources
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.cache
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTableTeatros.resources
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTableReservas.resources

@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Core
 {
-    internal interface IUnitofWork
+    public interface IUnitofWork
     {
+        Irepository<T> Repository<T>() where T : class;
+
+        int Guardar();
+
+        void ComenzarTransaccion();
+
+        void ReversarTransaccion();
+
+        void ConfirmarTransaccion();
     }
 }
