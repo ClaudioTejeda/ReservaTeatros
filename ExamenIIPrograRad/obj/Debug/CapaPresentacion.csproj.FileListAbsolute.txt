@@ -21,3 +21,6 @@ C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\o
 C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\obj\Debug\ExamenIIPrograRad.exe
 C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\obj\Debug\ExamenIIPrograRad.pdb
 C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\obj\Debug\ExamenIIPrograRad.PTeatros.resources
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\obj\Debug\ExamenIIPrograRad.Buscarcliente.resources
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\obj\Debug\ExamenIIPrograRad.BuscarTeatros.resources
+C:\Users\claud\OneDrive\Documentos\Examen2\ExamenIIPrograRad\ExamenIIPrograRad\obj\Debug\ExamenIIPrograRad.PReservas.resources

@@ -93,6 +93,7 @@
             this.gestionarReservasToolStripMenuItem.Name = "gestionarReservasToolStripMenuItem";
             this.gestionarReservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestionarReservasToolStripMenuItem.Text = "GestionarReservas";
+            this.gestionarReservasToolStripMenuItem.Click += new System.EventHandler(this.gestionarReservasToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 

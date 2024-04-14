@@ -47,6 +47,17 @@ namespace CapaNegocio
             });
             return teatros.Cast<object>().ToList();
         }
+        public List<object> buscarteatrosactivosgrid()
+        {
+            var teatros = dTeatros.TodosLosTeatros().Select(c => new
+            {
+                c.TeatroId,
+                c.Nombre,
+                c.Capacidad,
+                c.Estado
+            });
+            return teatros.Where(c => c.Estado ==true).Cast<object>().ToList();
+        }
         public List<object> BuscarTeatrosActivosGrid()
         {
             var teatros = dTeatros.TodosLosTeatros().Select(c => new

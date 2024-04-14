@@ -1,4 +1,5 @@
-﻿using CapaNegocio;
+﻿using CapaDatos.BasedeDatos.Modelos;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,121 +29,109 @@ namespace ExamenIIPrograRad
         void CargarDatos()
         {
             var datos = nreservas.obtenerreservasGrid();
-            dgPacientes.DataSource = datos;
+            dgReservas.DataSource = datos;
         }
         void LimpiarDatos()
         {
-            txtMedico.Text = "";
-            txtPaciente.Text = "";
+            txtCliente.Text = "";
+            txtTeatro.Text = "";
             idmedico.Text = "";
             idpaciente.Text = "";
             txtCitaId.Text = "";
             dateTimeFechaingreso.Value = DateTime.Now;
-            //errorProvider1.Clear();
+            errorProvider1.Clear();
         }
-        //private bool ValidarDatos()
-        //{
-        //    var FormularioValido = true;
-        //    if (string.IsNullOrEmpty(txtMedico.Text.ToString()) || string.IsNullOrWhiteSpace(txtMedico.Text.ToString()))
-        //    {
-        //        FormularioValido = false;
-        //        errorProvider1.SetError(txtMedico, "Debe de buscar y seleccionar un Medico");
-        //        return FormularioValido;
-        //    }
-        //    if (string.IsNullOrEmpty(txtPaciente.Text.ToString()) || string.IsNullOrWhiteSpace(txtPaciente.Text.ToString()))
-        //    {
-        //        FormularioValido = false;
-        //        errorProvider1.SetError(txtPaciente, "Debe buscar y seleccionar un Paciente");
-        //        return FormularioValido;
-        //    }
-        //    return FormularioValido;
-        //}
+        private bool ValidarDatos()
+        {
+            var FormularioValido = true;
+            if (string.IsNullOrEmpty(txtCliente.Text.ToString()) || string.IsNullOrWhiteSpace(txtCliente.Text.ToString()))
+            {
+                FormularioValido = false;
+                errorProvider1.SetError(txtCliente, "Debe de buscar y seleccionar un Cliente");
+                return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(txtTeatro.Text.ToString()) || string.IsNullOrWhiteSpace(txtTeatro.Text.ToString()))
+            {
+                FormularioValido = false;
+                errorProvider1.SetError(txtTeatro, "Debe buscar y seleccionar un Teatro");
+                return FormularioValido;
+            }
+            return FormularioValido;
+        }
 
         private void PCitas_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnbuscarMedico_Click(object sender, EventArgs e)
-        {
-            //BuscarMedico medico = new BuscarMedico();
-            //medico.ShowDialog();
-            //idmedico.Text = medico.MedicoId;
-            //txtMedico.Text = medico.Nombre_Completo;
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnBuscarPaciente_Click(object sender, EventArgs e)
-        {
-            //BuscarPaciente paciente = new BuscarPaciente();
-            //paciente.ShowDialog();
-            //idpaciente.Text = paciente.PacienteId;
-            //txtPaciente.Text = paciente.Nombre_Completo;
-        }
-
-        private void btnguardar_Click(object sender, EventArgs e)
-        {
-            //if (ValidarDatos())
-            //{
-            //    Citas cita = new Citas()
-            //    {
-            //        MedicoId = int.Parse(idmedico.Text.ToString()),
-            //        PacienteId = int.Parse(idpaciente.Text.ToString()),
-            //        Medico = txtMedico.Text,
-            //        Paciente = txtPaciente.Text,
-            //        FechaCita = dateTimeFechaingreso.Value,
-            //        Estado = checkBEstado.Checked,
-            //    };
-            //    if (!string.IsNullOrEmpty(txtCitaId.Text) && int.TryParse(txtCitaId.Text.ToString(), out int citaid) && citaid != 0)
-            //    {
-            //        cita.CitaId = citaid;
-            //        nCitas.EditarCitas(cita);
-            //    }
-            //    else
-            //    {
-            //        nCitas.AgregarCitas(cita);
-            //    }
-            //    LimpiarDatos();
-            //    CargarDatos();
-            //}
-        }
-
-        private void dgPacientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if (e.RowIndex >= 0 && e.RowIndex < dgPacientes.Rows.Count)
-            //{
-            //    txtCitaId.Text = dgPacientes.CurrentRow.Cells["CitaId"].Value.ToString();
-            //    idmedico.Text = dgPacientes.CurrentRow.Cells["MedicoId"].Value.ToString();
-            //    idpaciente.Text = dgPacientes.CurrentRow.Cells["PacienteId"].Value.ToString();
-            //    txtMedico.Text = dgPacientes.CurrentRow.Cells["Medico"].Value.ToString();
-            //    txtPaciente.Text = dgPacientes.CurrentRow.Cells["Paciente"].Value.ToString();
-            //    dateTimeFechaingreso.Text = dgPacientes.CurrentRow.Cells["FechaCita"].Value.ToString();
-            //    checkBEstado.Checked = bool.Parse(dgPacientes.CurrentRow.Cells["Estado"].Value.ToString());
-            //}
-        }
-
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            //var citaid = txtCitaId.Text.ToString();
-            //if (string.IsNullOrEmpty(citaid) || string.IsNullOrWhiteSpace(citaid))
-            //{
-            //    return;
-            //}
-            //nCitas.Eliminar(int.Parse(citaid));
-            //CargarDatos();
-            //LimpiarDatos();
-        }
-
         private void btnbuscarMedico_Click_1(object sender, EventArgs e)
         {
             Buscarcliente reserva = new Buscarcliente();
             reserva.ShowDialog();
             idmedico.Text = reserva.ClienteId;
-            txtMedico.Text = reserva.Nombre_Completo;
+            txtCliente.Text = reserva.Nombre_Completo;
+        }
+        private void btnBuscarPaciente_Click_1(object sender, EventArgs e)
+        {
+            BuscarTeatros paciente = new BuscarTeatros();
+            paciente.ShowDialog();
+            idpaciente.Text = paciente.Teatroid;
+            txtTeatro.Text = paciente.Nombre;
+        }
+        private void btnguardar_Click_1(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                Reservas reserva = new Reservas()
+                {
+                    ClienteId = int.Parse(idmedico.Text.ToString()),
+                    TeatroId = int.Parse(idpaciente.Text.ToString()),
+                    Cliente = txtCliente.Text,
+                    Teatro = txtTeatro.Text,
+                    FechaReserva = dateTimeFechaingreso.Value,
+                };
+                if (!string.IsNullOrEmpty(txtCitaId.Text) && int.TryParse(txtCitaId.Text.ToString(), out int reservaid) && reservaid != 0)
+                {
+                    reserva.ReservaId = reservaid;
+                    nreservas.Editarreservas(reserva);
+                }
+                else
+                {
+                    nreservas.Agregarreservas(reserva);
+                }
+                LimpiarDatos();
+                CargarDatos();
+            }
+
+        }
+
+        private void dgPacientes_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgReservas.Rows.Count)
+            {
+                txtCitaId.Text = dgReservas.CurrentRow.Cells["ReservaId"].Value.ToString();
+                idmedico.Text = dgReservas.CurrentRow.Cells["ClienteId"].Value.ToString();
+                idpaciente.Text = dgReservas.CurrentRow.Cells["TeatroId"].Value.ToString();
+                txtCliente.Text = dgReservas.CurrentRow.Cells["Cliente"].Value.ToString();
+                txtTeatro.Text = dgReservas.CurrentRow.Cells["Teatro"].Value.ToString();
+                dateTimeFechaingreso.Text = dgReservas.CurrentRow.Cells["FechaReserva"].Value.ToString();
+            }
+        }
+
+        private void btneliminar_Click_1(object sender, EventArgs e)
+        {
+            var reservaid = txtCitaId.Text.ToString();
+            if (string.IsNullOrEmpty(reservaid) || string.IsNullOrWhiteSpace(reservaid))
+            {
+                return;
+            }
+            nreservas.Eliminar(int.Parse(reservaid));
+            CargarDatos();
+            LimpiarDatos();
         }
     }
 }
