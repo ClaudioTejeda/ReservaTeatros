@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Core
 {
-    internal interface Irepository
+    public interface Irepository<T> where T : class
     {
+        void Agregar(T entidad);
+        IQueryable<T> Consulta();
+        void Editar(T entidad);
+        void Eliminar(T entidad);
     }
 }

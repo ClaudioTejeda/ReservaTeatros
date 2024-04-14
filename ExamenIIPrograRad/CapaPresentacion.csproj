@@ -56,14 +56,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Buscarcliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Buscarcliente.Designer.cs">
+      <DependentUpon>Buscarcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarteatro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarteatro.Designer.cs">
+      <DependentUpon>buscarteatro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarTeatros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarTeatros.Designer.cs">
+      <DependentUpon>BuscarTeatros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PClientes.Designer.cs">
+      <DependentUpon>PClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PReservas.Designer.cs">
+      <DependentUpon>PReservas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PTeatros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTeatros.Designer.cs">
+      <DependentUpon>PTeatros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Buscarcliente.resx">
+      <DependentUpon>Buscarcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarTeatros.resx">
+      <DependentUpon>BuscarTeatros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PClientes.resx">
+      <DependentUpon>PClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PReservas.resx">
+      <DependentUpon>PReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PTeatros.resx">
+      <DependentUpon>PTeatros.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -52,11 +52,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasedeDatos\ExamenContext.cs" />
+    <Compile Include="BasedeDatos\Modelos\Clientes.cs" />
+    <Compile Include="BasedeDatos\Modelos\Reservas.cs" />
+    <Compile Include="BasedeDatos\Modelos\Teatros.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Core\Irepository.cs" />
     <Compile Include="Core\IUnitofWork.cs" />
     <Compile Include="Core\Repository.cs" />
     <Compile Include="Core\UnitofWork.cs" />
+    <Compile Include="DClientes.cs" />
+    <Compile Include="DReservas.cs" />
+    <Compile Include="DTeatros.cs" />
+    <Compile Include="Migrations\202404141650597_AddTableClientes.cs" />
+    <Compile Include="Migrations\202404141650597_AddTableClientes.designer.cs">
+      <DependentUpon>202404141650597_AddTableClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404141658005_AddTableTeatros.cs" />
+    <Compile Include="Migrations\202404141658005_AddTableTeatros.designer.cs">
+      <DependentUpon>202404141658005_AddTableTeatros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404141708164_AddTableReservas.cs" />
+    <Compile Include="Migrations\202404141708164_AddTableReservas.designer.cs">
+      <DependentUpon>202404141708164_AddTableReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,7 +83,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BasedeDatos\Modelos\" />
+    <EmbeddedResource Include="Migrations\202404141650597_AddTableClientes.resx">
+      <DependentUpon>202404141650597_AddTableClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404141658005_AddTableTeatros.resx">
+      <DependentUpon>202404141658005_AddTableTeatros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404141708164_AddTableReservas.resx">
+      <DependentUpon>202404141708164_AddTableReservas.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
