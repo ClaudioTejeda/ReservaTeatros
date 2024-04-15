@@ -30,5 +30,12 @@ namespace ExamenIIPrograRad
             teatros.MdiParent = this;
             teatros.Show();
         }
+
+        private void gestionarReservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PReservas reservas = new PReservas();
+            reservas.MdiParent = this;
+            reservas.Show();
+        }
     }
 }

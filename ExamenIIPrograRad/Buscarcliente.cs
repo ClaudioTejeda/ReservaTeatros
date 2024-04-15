@@ -23,6 +23,7 @@ namespace ExamenIIPrograRad
         {
             InitializeComponent();
             nclientes = new NClientes();
+            cargardatos();
         }
 
         private void Buscarcliente_Load(object sender, EventArgs e)

@@ -15,10 +15,13 @@ namespace ExamenIIPrograRad
     public partial class PClientes : Form
     {
         private NClientes nclientes;
+        private NReservas nReservas;
         public PClientes()
         {
             InitializeComponent();
             nclientes = new NClientes();
+            nReservas = new NReservas();
+
             CargarDatos();
         }
 
@@ -116,6 +119,12 @@ namespace ExamenIIPrograRad
             var clienteid = txtClienteid.Text.ToString();
             if (string.IsNullOrEmpty(clienteid) || string.IsNullOrWhiteSpace(clienteid))
             {
+                return;
+            }
+            var asociado = nReservas.todaslasreservas().Where(c => c.ClienteId == int.Parse(clienteid)).ToList();
+            if (asociado.Count > 0)
+            {
+                MessageBox.Show("El cliente esta asociado a una reservacion para eliminar desvincule ");
                 return;
             }
             nclientes.EliminarClientes(int.Parse(clienteid));

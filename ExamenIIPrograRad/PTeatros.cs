@@ -1,4 +1,5 @@
-﻿using CapaDatos.BasedeDatos.Modelos;
+﻿using CapaDatos;
+using CapaDatos.BasedeDatos.Modelos;
 using CapaNegocio;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,12 @@ namespace ExamenIIPrograRad
     public partial class PTeatros : Form
     {
         private NTeatros nTeatros;
+        private NReservas nReservas;
         public PTeatros()
         {
             InitializeComponent();
             nTeatros = new NTeatros();
+            nReservas = new NReservas();
             CargarDatos();
         }
 
@@ -105,6 +108,12 @@ namespace ExamenIIPrograRad
             var teatroId = txtPacienteid.Text.ToString();
             if (string.IsNullOrEmpty(teatroId) || string.IsNullOrWhiteSpace(teatroId))
             {
+                return;
+            }
+            var asociado = nReservas.todaslasreservas().Where(c => c.TeatroId == int.Parse(teatroId)).ToList();
+            if (asociado.Count > 0)
+            {
+                MessageBox.Show("El Teatro esta asociado a una reservacion para eliminar desvincule ");
                 return;
             }
             nTeatros.Eliminarteatros(int.Parse(teatroId));

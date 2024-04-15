@@ -22,6 +22,7 @@ namespace ExamenIIPrograRad
         {
             InitializeComponent();
             nteatros = new NTeatros();
+            cargardatos();
         }
 
         private void BuscarTeatros_Load(object sender, EventArgs e)
@@ -41,6 +42,15 @@ namespace ExamenIIPrograRad
             Capacidad = dgBuscarPaciente.CurrentRow.Cells["Capacidad"].Value.ToString();
             Estado = dgBuscarPaciente.CurrentRow.Cells["Estado"].Value.ToString();
             this.Visible = false;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            dgBuscarPaciente.DataSource = nteatros.buscarteatrosactivosgrid();
+            if (checkBox1.Checked == false)
+            {
+                cargardatos();
+            }
         }
     }
 }

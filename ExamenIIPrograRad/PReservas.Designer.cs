@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.idpaciente = new System.Windows.Forms.TextBox();
             this.idmedico = new System.Windows.Forms.TextBox();
-            this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.txtMedico = new System.Windows.Forms.TextBox();
+            this.txtTeatro = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnBuscarPaciente = new System.Windows.Forms.Button();
-            this.btnbuscarMedico = new System.Windows.Forms.Button();
-            this.dgPacientes = new System.Windows.Forms.DataGridView();
+            this.btnBuscarTeatro = new System.Windows.Forms.Button();
+            this.btnbuscarCliente = new System.Windows.Forms.Button();
+            this.dgReservas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.dateTimeFechaingreso = new System.Windows.Forms.DateTimePicker();
@@ -48,7 +48,7 @@
             this.lab2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,23 +72,23 @@
             this.idmedico.TabIndex = 72;
             this.idmedico.Visible = false;
             // 
-            // txtPaciente
+            // txtTeatro
             // 
-            this.txtPaciente.Enabled = false;
-            this.txtPaciente.Location = new System.Drawing.Point(448, 85);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.ReadOnly = true;
-            this.txtPaciente.Size = new System.Drawing.Size(193, 20);
-            this.txtPaciente.TabIndex = 71;
+            this.txtTeatro.Enabled = false;
+            this.txtTeatro.Location = new System.Drawing.Point(448, 85);
+            this.txtTeatro.Name = "txtTeatro";
+            this.txtTeatro.ReadOnly = true;
+            this.txtTeatro.Size = new System.Drawing.Size(193, 20);
+            this.txtTeatro.TabIndex = 71;
             // 
-            // txtMedico
+            // txtCliente
             // 
-            this.txtMedico.Enabled = false;
-            this.txtMedico.Location = new System.Drawing.Point(448, 56);
-            this.txtMedico.Name = "txtMedico";
-            this.txtMedico.ReadOnly = true;
-            this.txtMedico.Size = new System.Drawing.Size(193, 20);
-            this.txtMedico.TabIndex = 70;
+            this.txtCliente.Enabled = false;
+            this.txtCliente.Location = new System.Drawing.Point(448, 56);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
+            this.txtCliente.Size = new System.Drawing.Size(193, 20);
+            this.txtCliente.TabIndex = 70;
             // 
             // label7
             // 
@@ -110,34 +110,36 @@
             this.label2.TabIndex = 68;
             this.label2.Text = "Cliente";
             // 
-            // btnBuscarPaciente
+            // btnBuscarTeatro
             // 
-            this.btnBuscarPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPaciente.Location = new System.Drawing.Point(212, 116);
-            this.btnBuscarPaciente.Name = "btnBuscarPaciente";
-            this.btnBuscarPaciente.Size = new System.Drawing.Size(110, 22);
-            this.btnBuscarPaciente.TabIndex = 67;
-            this.btnBuscarPaciente.Text = "Buscar";
-            this.btnBuscarPaciente.UseVisualStyleBackColor = true;
+            this.btnBuscarTeatro.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarTeatro.Location = new System.Drawing.Point(212, 116);
+            this.btnBuscarTeatro.Name = "btnBuscarTeatro";
+            this.btnBuscarTeatro.Size = new System.Drawing.Size(110, 22);
+            this.btnBuscarTeatro.TabIndex = 67;
+            this.btnBuscarTeatro.Text = "Buscar";
+            this.btnBuscarTeatro.UseVisualStyleBackColor = true;
+            this.btnBuscarTeatro.Click += new System.EventHandler(this.btnBuscarPaciente_Click_1);
             // 
-            // btnbuscarMedico
+            // btnbuscarCliente
             // 
-            this.btnbuscarMedico.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscarMedico.Location = new System.Drawing.Point(212, 88);
-            this.btnbuscarMedico.Name = "btnbuscarMedico";
-            this.btnbuscarMedico.Size = new System.Drawing.Size(110, 22);
-            this.btnbuscarMedico.TabIndex = 66;
-            this.btnbuscarMedico.Text = "Buscar";
-            this.btnbuscarMedico.UseVisualStyleBackColor = true;
-            this.btnbuscarMedico.Click += new System.EventHandler(this.btnbuscarMedico_Click_1);
+            this.btnbuscarCliente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscarCliente.Location = new System.Drawing.Point(212, 88);
+            this.btnbuscarCliente.Name = "btnbuscarCliente";
+            this.btnbuscarCliente.Size = new System.Drawing.Size(110, 22);
+            this.btnbuscarCliente.TabIndex = 66;
+            this.btnbuscarCliente.Text = "Buscar";
+            this.btnbuscarCliente.UseVisualStyleBackColor = true;
+            this.btnbuscarCliente.Click += new System.EventHandler(this.btnbuscarMedico_Click_1);
             // 
-            // dgPacientes
+            // dgReservas
             // 
-            this.dgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPacientes.Location = new System.Drawing.Point(48, 204);
-            this.dgPacientes.Name = "dgPacientes";
-            this.dgPacientes.Size = new System.Drawing.Size(593, 150);
-            this.dgPacientes.TabIndex = 65;
+            this.dgReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgReservas.Location = new System.Drawing.Point(48, 204);
+            this.dgReservas.Name = "dgReservas";
+            this.dgReservas.Size = new System.Drawing.Size(593, 150);
+            this.dgReservas.TabIndex = 65;
+            this.dgReservas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPacientes_CellDoubleClick_1);
             // 
             // btneliminar
             // 
@@ -148,6 +150,7 @@
             this.btneliminar.TabIndex = 64;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // btnguardar
             // 
@@ -158,6 +161,7 @@
             this.btnguardar.TabIndex = 63;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click_1);
             // 
             // dateTimeFechaingreso
             // 
@@ -236,13 +240,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.idpaciente);
             this.Controls.Add(this.idmedico);
-            this.Controls.Add(this.txtPaciente);
-            this.Controls.Add(this.txtMedico);
+            this.Controls.Add(this.txtTeatro);
+            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnBuscarPaciente);
-            this.Controls.Add(this.btnbuscarMedico);
-            this.Controls.Add(this.dgPacientes);
+            this.Controls.Add(this.btnBuscarTeatro);
+            this.Controls.Add(this.btnbuscarCliente);
+            this.Controls.Add(this.dgReservas);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.dateTimeFechaingreso);
@@ -255,7 +259,7 @@
             this.Name = "PReservas";
             this.Text = "PReservas";
             this.Load += new System.EventHandler(this.PReservas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,13 +270,13 @@
 
         private System.Windows.Forms.TextBox idpaciente;
         private System.Windows.Forms.TextBox idmedico;
-        private System.Windows.Forms.TextBox txtPaciente;
-        private System.Windows.Forms.TextBox txtMedico;
+        private System.Windows.Forms.TextBox txtTeatro;
+        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBuscarPaciente;
-        private System.Windows.Forms.Button btnbuscarMedico;
-        private System.Windows.Forms.DataGridView dgPacientes;
+        private System.Windows.Forms.Button btnBuscarTeatro;
+        private System.Windows.Forms.Button btnbuscarCliente;
+        private System.Windows.Forms.DataGridView dgReservas;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.DateTimePicker dateTimeFechaingreso;

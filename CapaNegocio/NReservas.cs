@@ -40,10 +40,10 @@ namespace CapaNegocio
             var reservas = dreservas.Todaslasreservas().Select(c => new
             {
                 c.ReservaId,
-                c.TeatroId,
                 c.ClienteId,
-                c.Teatro,
                 c.Cliente,
+                c.TeatroId,
+                c.Teatro,
                 c.FechaReserva
             });
             return reservas.Cast<object>().ToList();
